@@ -5,8 +5,8 @@ const FotterComponent = () => {
   return (
     <div className="fotter">
       <form className="typingContainer">
-        <input type="text" className="typingContainer__box" />
-        <SendIcon />
+        <input type="text" placeholder="Type a message" className="typingContainer__box" />
+        <SendIcon className="send__icon" />
       </form>
     </div>
   );
