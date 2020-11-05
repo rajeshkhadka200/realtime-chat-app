@@ -1,0 +1,7 @@
+.main__box {
+    background-color: antiquewhite;
+    min-height: 500px;
+    min-width:400px;
+    display: block;
+    margin: 0 auto;
+}
