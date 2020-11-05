@@ -8,7 +8,7 @@ function Header() {
           <div className="logo">
               <div className="img">
                   {/* <img src={} alt="Not Found"/> */}
-                  s
+                  
               </div>
               <div className="logo_name">
                   SR clan
