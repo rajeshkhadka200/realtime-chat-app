@@ -1,11 +1,13 @@
-import './css/App.css';
+import "./css/App.css";
 import ChattingBox from "./components/ChattingBox";
-
+import  {ContextProvider}  from "./Context";
 function App() {
   return (
-    <div className="main__app__container"> 
-    <ChattingBox />
-    </div>
+    <div className="main__app__container">
+      <ContextProvider>
+        <ChattingBox />
+    </ContextProvider>
+      </div>
   );
 }
 
