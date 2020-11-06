@@ -1,4 +1,5 @@
 import React from "react";
+import Logo from "../img/logo.jpg"
 
 const MessageDisplayArea = () => {
   return (
@@ -33,11 +34,9 @@ const MessageDisplayArea = () => {
         <div className="message__row">
           <div className="message">How are you</div>
         </div>
-        <div className="message__row">
-          <div className="message">Me too.</div>
-        </div>
+        
        </div>
-      <img className="user__logo"src="https://avatars2.githubusercontent.com/u/55448895?s=400&u=7dc0dcebbea6d8a1e5b3b088fa4678de3064ff98&v=4" />
+      <img className="user__logo" src={Logo} />
       </div>
     </div>
   );
