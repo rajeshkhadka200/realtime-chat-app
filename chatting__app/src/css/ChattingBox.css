@@ -55,11 +55,15 @@
   margin: 0 10px;
 }
 span {
-  height: 10px;
-  width: 10px;
+  height: 20px;
+  width: 20px;
   background-color: green;
   border-radius: 50%;
+  font-size: 13px;
   margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* styling the middle chat area */
