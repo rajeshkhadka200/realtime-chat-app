@@ -46,14 +46,15 @@
 }
 
 /* styling for header component */
-.header {
-  width: 100%;
+.header{
+  width: calc(100% - 20px);
   height: 60px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
   background-color: #0084ff;
   color: #ffffff;
+  padding:0 10px;
 }
 .logo {
   width: 50%;
@@ -124,4 +125,25 @@
   border-radius: 0px;
   border-top-left-radius: 20px;
   border-bottom-left-radius: 20px;
+}
+.logo{
+  /* width: 50%; */
+  display: flex;
+  align-items: center;
+}
+.active_status{
+  /* width: 50%; */
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 10px;
+
+}
+.img{
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid #111;
+}
+.logo_name{
+  margin: 0 10px ;
 }
