@@ -1,3 +1,4 @@
+/* styling the main part */
 .main__box {
   min-height: 600px;
   width: 500px;
@@ -65,68 +66,7 @@
   width: 50%;
   display: flex;
 }
-.user__logo {
-  object-fit: contain;
-  width: 30px;
-  border-radius: 50%;
-  margin-right: 10px;
-  margin-top: auto;
-}
-.user2 .user__logo {
-  margin-left: auto;
-}
-.user1 {
-  margin-right: 0px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
-.user2 {
-  float: right;
-  display: flex;
-}
 
-.message {
-  padding: 8px 15px;
-  background: #e8e8e8;
-  border-top-right-radius: 20px;
-  border-bottom-right-radius: 20px;
-}
-.message__container {
-  display: flex;
-  flex-direction: column;
-}
-
-.user2 .message__container {
-  margin-right: 10px;
-}
-.user2 .message {
-  background: #0084ff;
-  color: #fff;
-  margin-left: auto;
-}
-.message__row {
-  margin-top: 3px;
-  display: flex;
-}
-
-.message__row:nth-of-type(1) > .message {
-  border-top-left-radius: 20px;
-}
-.user2 .message__row:nth-of-type(1) > .message {
-  border-top-right-radius: 20px;
-}
-.message__row:nth-last-of-type(1) > .message {
-  border-bottom-left-radius: 20px;
-}
-.user2 .message__row:nth-last-of-type(1) > .message {
-  border-bottom-right-radius: 20px;
-}
-.user2 .message {
-  border-radius: 0px;
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-}
 .logo {
   display: flex;
   align-items: center;
@@ -154,14 +94,123 @@
   margin: 0 10px;
 }
 span {
-  height: 20px;
-  width: 20px;
-  background-color: #00ef00;
+  height: 10px;
+  width: 10px;
+  background-color: green;
   border-radius: 50%;
   margin: 0 10px;
+}
+
+/* styling the middle chat area */
+.messageArea {
+  flex: 1;
+  padding: 0px 20px;
+  padding-top: 10px;
+}
+/* for the both users  */
+.user__logo {
+  object-fit: contain;
+  width: 30px;
+  border-radius: 50%;
+  margin-top: auto;
+}
+.message {
+  padding: 8px 15px;
+  background: #e8e8e8;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.message__container {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+}
+
+.message__row {
+  margin-top: 3px;
+  display: flex;
+}
+
+/* for the  user one */
+.user1 {
+  margin-right: 0px;
+  color: #722a00;
+}
+.user1 .user__logo {
+  margin-right: 10px;
+}
+.user1 {
+  margin-right: 0px;
+  display: flex;
   align-items: center;
-  font-size: 13px;
-  color: #333;
+  margin-bottom: 20px;
+}
+
+.message__row:nth-of-type(1) > .message {
+  border-top-left-radius: 20px;
+}
+
+.message__row:nth-last-of-type(1) > .message {
+  border-bottom-left-radius: 20px;
+}
+/* for the user two  */
+.user2 .user__logo {
+  margin-left: auto;
+}
+
+.user2 {
+  float: right;
+  display: flex;
+}
+
+.user2 .message__container {
+  margin-right: 10px;
+}
+.user2 .message {
+  background: #0084ff;
+  color: #fff;
+  margin-left: auto;
+}
+
+.user2 .message__row:nth-of-type(1) > .message {
+  border-top-right-radius: 20px;
+}
+.user2 .message__row:nth-last-of-type(1) > .message {
+  border-bottom-right-radius: 20px;
+}
+.user2 .message {
+  border-radius: 0px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+/* styling the bottom part */
+.fotter {
+  min-height: 55px;
+  min-width: 100%;
+  display: flex;
+  background: #3333;
+}
+
+.typingContainer {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: space-around;
+}
+.typingContainer__box {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: #ffffff;
+  height: 100%;
+  padding: 0px 10px;
+  font-size: 1.1em;
+  border-top: 1px solid rgba(51, 51, 51, 0.274);
+}
+.send__icon {
+  padding: 15px 18px;
+  text-align: center;
+  background: #0084ff;
+  color: #fff;
+  cursor: pointer;
 }
