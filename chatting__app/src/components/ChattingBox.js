@@ -7,6 +7,7 @@ import Header from './Header';
 const ChattingBox = () => {
     return (
         <div className="main__box">
+            <Header />
             <MessageDisplayArea />
             <FotterComponent />
         </div>

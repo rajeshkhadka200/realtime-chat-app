@@ -1,21 +1,21 @@
 import React from 'react';
-import '../css/ChattingBox.css'
-
+import '../css/ChattingBox.css';
+import LogoIcon from '../img/logo.jpg'
 function Header() {
     return (
       <>
       <div className="header">
           <div className="logo">
-              <div className="img">
-                  {/* <img src={} alt="Not Found"/> */}
+              <div className="img_container">
+                  <img src={LogoIcon} alt="Not Found"/>
                   
               </div>
               <div className="logo_name">
-                  SR clan
+                  SR Boyz 
               </div>
           </div>
           <div className="active_status">
-              <h3>Active Status</h3>
+              Active Status
               <span></span>
           </div>
       </div>
