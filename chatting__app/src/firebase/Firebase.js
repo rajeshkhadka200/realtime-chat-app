@@ -1,14 +1,17 @@
-import firebase from 'firebase' 
-
-var ChatApp = firebase.initializeApp({
-	apiKey: "AIzaSyAjmNonotaMOJAHmo0uky4rSCVpOCU1tMs",
-    	authDomain: "chat-app-6594b.firebaseapp.com",
-    	databaseURL: " https://chat-app-6594b.firebaseio.com ",
-    	projectId: "chat-app-6594b",
-    	storageBucket: "chat-app-6594b.appspot.com",
-    	messagingSenderId: "261391510226",
-    	appId: "1:261391510226:web:3dfc2de17c3b74284a1b0b"
-});
-var db = ChatApp.firestore(); 
-
-export {db} ;
+ 
+import firebase from 'firebase';  
+var firebaseConfig = {
+    apiKey: "AIzaSyDYRbo_XtdQZl5dPIJCPlCKfuDj83Kkh6I",
+    authDomain: "chatting-app-a79c7.firebaseapp.com",
+    databaseURL: "https://chatting-app-a79c7.firebaseio.com",
+    projectId: "chatting-app-a79c7",
+    storageBucket: "chatting-app-a79c7.appspot.com",
+    messagingSenderId: "227548068880",
+    appId: "1:227548068880:web:ce82a025bc7bd74c355e95",
+    measurementId: "G-2W9EYC7P95"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.database().ref("messages");
+  
+export {db} ; 
