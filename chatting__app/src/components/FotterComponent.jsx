@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import SendIcon from "@material-ui/icons/Send";
 import { Messages } from "../Context";
-import { db } from "../firebase/Firebase.js";
+import { db } from "../Firebase/Firebase";
 
 const FotterComponent = () => {
   const [, setMessage, user] = useContext(Messages);

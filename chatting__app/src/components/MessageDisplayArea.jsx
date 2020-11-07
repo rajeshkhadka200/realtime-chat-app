@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import Logo from "../img/logo.jpg";
 import { Messages } from "../Context";
 import { db } from "../firebase/Firebase";
 
@@ -32,7 +31,7 @@ const MessageDisplayArea = () => {
                   <div className="message">{data.data}</div>
                 </div>
               </div>
-              
+
               {data.user !==user ?  <img
                 alt=""
                 className="user__logo"
