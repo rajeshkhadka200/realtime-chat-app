@@ -1,10 +1,10 @@
 import React, { useContext, useState } from "react";
 import SendIcon from "@material-ui/icons/Send";
 import { Messages } from "../Context";
-import { db } from "../Firebase/Firebase";
+import { db } from "../firebase/Firebase";
 
 const FotterComponent = () => {
-  const [, setMessage, user] = useContext(Messages);
+  const [, setMessage, user , userLogo] = useContext(Messages);
   const [typeMessage, setTypeMessage] = useState();
   const generateId = () => {
     var n = new Date().getTime();
@@ -22,6 +22,7 @@ const FotterComponent = () => {
         user,
         id: generateId(),
         data: typeMessage,
+        userLogo,
       };
       db.push(dataToSend);
       setTypeMessage("");

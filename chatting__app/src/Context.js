@@ -2,16 +2,11 @@ import React, { createContext, useState } from "react";
 export const Messages = createContext();
 
 export const ContextProvider = (props) => {
-
-  const user = "Saroj";
-  
  
-    const [message, setMessage] = useState();
-
-  
+  const [message, setMessage] = useState();
 
   return (
-    <Messages.Provider value={[message, setMessage , user]}>
+    <Messages.Provider value={[message, setMessage , user , userLogo]}>
       {props.children}
     </Messages.Provider>
   );

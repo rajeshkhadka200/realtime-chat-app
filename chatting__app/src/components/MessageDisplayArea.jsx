@@ -1,7 +1,6 @@
 import React, { useContext, useEffect } from "react";
 import { Messages } from "../Context";
-import { db } from "../firebase/Firebase";
-
+import { db } from "../firebase/Firebase"; 
 const MessageDisplayArea = () => {
   const [message, setMessage, user] = useContext(Messages);
   useEffect(() => {
@@ -22,7 +21,7 @@ const MessageDisplayArea = () => {
               {data.user !==user ? "" : <img
                 alt=""
                 className="user__logo"
-                src="https://avatars2.githubusercontent.com/u/55448895?s=400&u=7dc0dcebbea6d8a1e5b3b088fa4678de3064ff98&v=4"
+                src={data.userLogo}
               />}
               
               
@@ -35,7 +34,7 @@ const MessageDisplayArea = () => {
               {data.user !==user ?  <img
                 alt=""
                 className="user__logo"
-                src={Logo}
+                src={data.userLogo}
               />: ""}
             </div>
           ))
