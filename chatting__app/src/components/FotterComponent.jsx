@@ -15,7 +15,7 @@ const FotterComponent = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (typeMessage === "") {
+    if (typeMessage === "" && typeMessage.split(" ").join("") === "") {
       return;
     } else {
       const dataToSend = {

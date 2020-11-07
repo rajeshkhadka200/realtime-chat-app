@@ -79,6 +79,7 @@ span {
   overflow-y: scroll;
   max-height: 600px;
   background: #fff;
+  overflow-x: hidden;
 }
  
 /* styling the scroll bar  */
@@ -105,6 +106,8 @@ background: #fff;
   background: #e8e8e8;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
+  max-width: 300px;
+  word-wrap: break-word;
 }
 .message__container {
   display: flex;
@@ -147,6 +150,7 @@ background: #fff;
   float: right;
   display: flex; 
   margin-bottom: 20px;
+  clear: both;
 }
 
 .user2 .message__container {

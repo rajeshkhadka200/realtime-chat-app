@@ -3,7 +3,7 @@ export const Messages = createContext();
 
 export const ContextProvider = (props) => {
 
-  const user = "Rajesh";
+  const user = "Saroj";
   
  
     const [message, setMessage] = useState();
