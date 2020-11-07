@@ -205,3 +205,26 @@ background: #fff;
   color: #fff;
   cursor: pointer;
 }
+/* styling for user details */
+.user_details_mainbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(190, 34, 34);
+  width: 30%;
+  height: 40%;
+  margin: 20px auto;
+}
+.user_details_mainbox .input_feild{
+  display: flex;
+  flex-direction: column;
+ 
+
+}
+.user_details_mainbox .input_feild input{
+  padding: 5px 2px ;
+ 
+  border:none;
+  outline: none;
+}
+/* styling for user details ends */

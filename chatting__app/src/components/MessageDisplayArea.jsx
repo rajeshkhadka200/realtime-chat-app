@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { Messages } from "../Context";
-import { db } from "../firebase/Firebase";
+import { db } from "../Firebase/Firebase";
+import Logo from '../img/logo.jpg'
 
 const MessageDisplayArea = () => {
   const [message, setMessage, user] = useContext(Messages);
