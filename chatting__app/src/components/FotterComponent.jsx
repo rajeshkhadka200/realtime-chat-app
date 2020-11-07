@@ -3,39 +3,33 @@ import SendIcon from "@material-ui/icons/Send";
 import { Messages } from "../Context";
 import { db } from "../firebase/Firebase.js";
 
-// const msg  = "hello is this working";
-// function handleSubmit(e) {
-//   e.preventDefault();
-
-// }
 const FotterComponent = () => {
-  const [message, setMessage, user] = useContext(Messages);
+  const [, setMessage, user] = useContext(Messages);
   const [typeMessage, setTypeMessage] = useState();
-  const { messageA } = message;
-
   const generateId = () => {
-    var n = (new Date()). getTime();
+    var n = new Date().getTime();
     return n;
   };
+
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
     if (typeMessage === "") {
       return;
     } else {
-      setMessage({
+      const dataToSend = {
         user,
-        messageA: [...messageA, { id: "1", data: typeMessage }],
-      });
-      db.collection("chatApp")
-        .add({
-          messsage: { id: generateId(), user,  data: typeMessage },
-        }) 
-        .catch((error) => {
-          console.log(error);
-        });
+        id: generateId(),
+        data: typeMessage,
+      };
+      db.push(dataToSend);
       setTypeMessage("");
     }
+  };
+
+  const handleType = (e) => {
+    setTypeMessage(e.target.value);
   };
   return (
     <div className="fotter">
@@ -45,9 +39,7 @@ const FotterComponent = () => {
           placeholder="Type a message"
           className="typingContainer__box"
           value={typeMessage}
-          onChange={(e) => {
-            setTypeMessage(e.target.value);
-          }}
+          onChange={handleType}
         />
         <SendIcon className="send__icon" onClick={handleSubmit} />
       </form>
