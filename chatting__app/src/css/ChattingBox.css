@@ -80,6 +80,7 @@ span {
   max-height: 600px;
   background: #fff;
 }
+ 
 /* styling the scroll bar  */
 .messageArea::-webkit-scrollbar{
 width: 10px;
