@@ -59,10 +59,11 @@ const MessageDisplayArea = () => {
     <div className="messageArea">
       {message
         ? message.map((data, index) => (
-            <div className={data.user !== user ? "user2" : "user1"} key={index}>
+          <>
+            <div className={data.user === user ? "user2" : "user1"} key={index}>
               {/* comparing if this is the repeated message of the user  */}
               {/* checking the user to display the image at first or at last */}
-              {data.user !== user ? (
+              {data.user === user ? (
                 ""
               ) : (
                 <img alt="" className="user__logo" src={data.userLogo} />
@@ -70,19 +71,26 @@ const MessageDisplayArea = () => {
               {/* rendering the message container with the message in it */}
 
               <div className="message__container">
+                <div className="rows">
                 {mapDataMessage(data.data)}
+                </div>
+                <div className="userName">
+                  {data.user}
+                </div>
               </div>
 
               {/* checking the user to display the image at first or at last */}
-
-              {data.user !== user ? (
+                
+              {data.user === user ? (
                 <img alt="" className="user__logo" src={data.userLogo} />
               ) : (
                 ""
               )}
-            </div>
+            </div> 
+            </>
           ))
         : ""}
+ 
     </div>
   );
 };

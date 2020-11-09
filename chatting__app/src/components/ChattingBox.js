@@ -10,9 +10,11 @@ const ChattingBox = () => {
     const { USERNAME, USERLOGO } = useContext(Messages);
     const [ user ]  = USERNAME;
     const [ userLogo ]  = USERLOGO;
+    console.log( userLogo)
+    console.log(user)
   return (
     <>
-      {user === "" && userLogo === "" ? (
+      {(user === "" && userLogo === "") ? (
         <div className="main__box">
           <UserDetails />
         </div>

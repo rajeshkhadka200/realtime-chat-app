@@ -1,14 +1,15 @@
 /* styling the main part */
 .main__box {
-  min-height: 600px; 
-  max-height: 600px; 
+  min-height: 600px;
+  max-height: 600px;
   width: 500px;
-  max-width: 700px; 
+  max-width: 700px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  border-radius: 5px; 
+  border-radius: 5px;
   overflow: hidden;
+  position: relative;
   box-shadow: 0px 0px 20px rgba(51, 51, 51, 0.431);
 }
 
@@ -22,7 +23,7 @@
   align-items: center;
   background-color: #0084ff;
   color: #ffffff;
-  padding:0px  10px;
+  padding: 0px 10px;
 }
 .logo {
   width: 50%;
@@ -58,7 +59,7 @@
 span {
   height: 10px;
   width: 10px;
-  background-color: #0084C0;
+  background-color: #0084c0;
   border-radius: 50%;
   font-size: 13px;
   margin: 0 10px;
@@ -81,20 +82,31 @@ span {
   background: #fff;
   overflow-x: hidden;
 }
- 
+
 /* styling the scroll bar  */
-.messageArea::-webkit-scrollbar{
-width: 10px;
+.messageArea::-webkit-scrollbar {
+  width: 10px;
 }
-.messageArea::-webkit-scrollbar-track{
-background: #fff; 
+.messageArea::-webkit-scrollbar-track {
+  background: #fff;
 }
-.messageArea::-webkit-scrollbar-thumb{
+.messageArea::-webkit-scrollbar-thumb {
   background: #bbbbbb;
   border-radius: 5px;
 }
 
 /* for the both users  */
+.userName {
+  font-size: smaller;
+  color: rgba(51, 51, 51, 0.431);
+  font-weight: bold;
+  text-transform: capitalize;
+  margin-left: 10px;
+}
+
+.user2 .userName {
+  display: none;
+}
 .user__logo {
   object-fit: contain;
   width: 30px;
@@ -121,8 +133,8 @@ background: #fff;
 
 /* for the  user one */
 .user1 {
-  margin-right: 0px; 
-  width:100%;
+  margin-right: 0px;
+  width: 100%;
 }
 .user1 .user__logo {
   margin-right: 10px;
@@ -148,7 +160,7 @@ background: #fff;
 
 .user2 {
   float: right;
-  display: flex; 
+  display: flex;
   margin-bottom: 20px;
   clear: both;
 }
@@ -206,25 +218,52 @@ background: #fff;
   cursor: pointer;
 }
 /* styling for user details */
-.user_details_mainbox{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgb(190, 34, 34);
-  width: 30%;
-  height: 40%;
-  margin: 20px auto;
+.input_feild {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
 }
-.user_details_mainbox .input_feild{
+.input_feild > form {
   display: flex;
   flex-direction: column;
- 
+  width: 65%;
+}
+
+.input_feild > form input {
+  border: none;
+  outline: none;
+  margin-bottom: 10px;
+  padding-top: 15px ;
+  padding-bottom: 5px;
+  background-color: transparent;
+  color: #fff;
+  border-bottom: 1px solid #fff;
+  font-size: 1.1em;
 
 }
-.user_details_mainbox .input_feild input{
-  padding: 5px 2px ;
- 
-  border:none;
-  outline: none;
+.input_feild > form input::-webkit-input-placeholder{
+  color:rgb(255, 255, 255);
+  font-size: 1em;
+  font-family: 'poppins' , sans-serif;
+  
+}
+.input_feild > form input[type="submit"] {
+  background-color: #005881;
+  color: #fff;
+  text-transform: capitalize;
+  font-size: 1.2em;
+  box-shadow: 0px 0px 20px #3333;
+  border: none;
+  margin-top: 20px;
+  padding-bottom: 15px;
+
+}
+.input_feild h3 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  color: rgb(32, 32, 32);
 }
 /* styling for user details ends */
