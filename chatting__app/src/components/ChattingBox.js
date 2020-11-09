@@ -1,17 +1,29 @@
-import React from 'react'
+import React, { useContext } from "react";
 import FotterComponent from "./FotterComponent";
 import MessageDisplayArea from "./MessageDisplayArea";
 import "../css/ChattingBox.css";
-import Header from './Header';
+import Header from "./Header";
+import {Messages} from "../Context";
+import UserDetails from "./UserDetails";
 
 const ChattingBox = () => {
-    return (
+    const { USERNAME, USERLOGO } = useContext(Messages);
+    const [ user ]  = USERNAME;
+    const [ userLogo ]  = USERLOGO;
+  return (
+    <>
+      {user === "" && userLogo === "" ? (
         <div className="main__box">
-            <Header />
-            <MessageDisplayArea />
-            <FotterComponent />
+          <UserDetails />
         </div>
-    )
-}
+      ) : (
+        <div className="main__box">
+          <Header />
+          <MessageDisplayArea /> <FotterComponent />
+        </div>
+      )}
+    </>
+  );
+};
 
-export default ChattingBox
+export default ChattingBox;
